@@ -1,6 +1,7 @@
 body{
     height: 100%;
     background-color: #AFC1B6;
+    font-family: 'Roboto', sans-serif;
 }
 html {
     height: 100%;
@@ -23,12 +24,18 @@ html {
     color: white;
 }
 
-.btn{
+.btn {
     color: white;
     background-color: #648374;
     border-color: #355245;
     border-radius: 4px;
+    font-weight: bold;
 }
+
+h2, h3{
+    font-weight: bold;
+}
+
 .btn:hover{
     color: white;
     background-color: #2b3d37;
@@ -56,4 +63,10 @@ html {
 .titlePorcentajes{
     color:black;
     margin-top: 30px;
+}
+
+.imgIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
 }

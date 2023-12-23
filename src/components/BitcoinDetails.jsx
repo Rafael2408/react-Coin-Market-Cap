@@ -18,12 +18,12 @@ function BitcoinDetails() {
   const quote = bitcoinData.quote.USD;
 
   const percentChanges = [
-    { name: 'Última: hora', value: quote.percent_change_1h / 100 },
-    { name: '24 horas', value: quote.percent_change_24h / 100 },
-    { name: '7 días', value: quote.percent_change_7d / 100 },
-    { name: '30 días', value: quote.percent_change_30d / 100 },
-    { name: '60 días', value: quote.percent_change_60d / 100 },
     { name: '90 días', value: quote.percent_change_90d / 100 },
+    { name: '60 días', value: quote.percent_change_60d / 100 },
+    { name: '30 días', value: quote.percent_change_30d / 100 },
+    { name: '7 días', value: quote.percent_change_7d / 100 },
+    { name: '24 horas', value: quote.percent_change_24h / 100 },
+    { name: 'Última: hora', value: quote.percent_change_1h / 100 },
   ];
 
   return (
