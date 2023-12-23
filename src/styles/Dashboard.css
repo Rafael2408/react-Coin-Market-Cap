@@ -1,0 +1,59 @@
+body{
+    height: 100%;
+    background-color: #AFC1B6;
+}
+html {
+    height: 100%;
+}
+
+.all{
+    display: flex;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+    background-color: #355245;
+    color: white;
+}
+
+.btn{
+    color: white;
+    background-color: #648374;
+    border-color: #355245;
+    border-radius: 4px;
+}
+.btn:hover{
+    color: white;
+    background-color: #2b3d37;
+    border-color: #648374;
+}
+
+.btn-selected {
+    color: white;
+    background-color: #2b3d37;
+    border-color: #474e4b;
+}
+
+.title{
+    display: flex;
+    color: rgb(43, 75, 51);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.volume_24h{
+    margin-left: 0.5rem;
+}
+
+.titlePorcentajes{
+    color:black;
+    margin-top: 30px;
+}
