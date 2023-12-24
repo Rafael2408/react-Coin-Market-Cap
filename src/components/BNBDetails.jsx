@@ -41,7 +41,7 @@ function BNBDetails() {
   return (
     <div className={`p-2 ${animation}`}>
       <div className='title'>
-        <h2 className='text-center' style={{ color: 'black' }}>Detalles de BNB <img src={bnbIcon} alt="BNB Icon" width={35} /></h2>
+        <h2 className='text-center'>Detalles de BNB <img src={bnbIcon} alt="BNB Icon" width={35} /></h2>
         <h6 style={{ color: 'black' }}>{new Date(bnbData.last_updated).toLocaleString()}</h6>
       </div>
       <h3>Precio actual:  <b>{formatNumber(quote.price.toFixed(2))}</b> $</h3>

@@ -38,7 +38,7 @@ function EthereumDetails() {
   return (
     <div className={`p-2 ${animation}`}>
       <div className='title'>
-        <h2 className='text-center' style={{ color: 'black' }}>Detalles de Ethereum <img src={ethIcon} alt="ETH Icon" width={35} /></h2>
+        <h2 className='text-center'>Detalles de Ethereum <img src={ethIcon} alt="ETH Icon" width={35} /></h2>
         <h6 style={{ color: 'black' }}>{new Date(ethData.last_updated).toLocaleString()}</h6>
       </div>
       <h3>Precio actual:  <b>{formatNumber(quote.price.toFixed(2))}</b> $</h3>

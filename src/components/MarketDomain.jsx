@@ -60,7 +60,7 @@ function MarketDomain() {
 
     return (
         <div>
-            <h2 className='text-center' style={{ color: 'black' }}>Dominio de Mercado de Criptomonedas</h2>
+            <h2 className='text-center'>Dominio de Mercado de Criptomonedas</h2>
             <ResponsiveContainer width="100%" height={500} className={animation}>
                 <PieChart>
                     <Pie

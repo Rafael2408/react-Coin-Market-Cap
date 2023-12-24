@@ -2,6 +2,7 @@ body{
     height: 100%;
     background: linear-gradient(to bottom, #88be88,#294234);
     font-family: 'Roboto', sans-serif;
+    color: white!important;
 }
 html {
     height: 100%;
@@ -45,6 +46,7 @@ html {
 
 h2, h3{
     font-weight: bold;
+    color: white;
 }
 
 .btn:hover{
