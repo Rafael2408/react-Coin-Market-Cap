@@ -1,6 +1,6 @@
 body{
     height: 100%;
-    background-color: #AFC1B6;
+    background: linear-gradient(to bottom, #88be88,#294234);
     font-family: 'Roboto', sans-serif;
 }
 html {
@@ -20,16 +20,27 @@ html {
     width: 250px;
     height: 100%;
     overflow: auto;
-    background-color: #355245;
+    background: linear-gradient(to bottom, #3f6454, #3c413b);
     color: white;
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.459);
 }
 
 .btn {
     color: white;
-    background-color: #648374;
-    border-color: #355245;
+    background-color: #638574;
+    border-color: #808582;
     border-radius: 4px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 43px;
+}
+
+.btn span{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 h2, h3{
@@ -68,5 +79,5 @@ h2, h3{
 .imgIcon {
     width: 25px;
     height: 25px;
-    margin-right: 0.5rem;
+    margin-left: 10px;
 }

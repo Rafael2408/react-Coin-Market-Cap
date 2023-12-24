@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useAxios from '../Hooks/useAxios';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer, LabelList } from 'recharts';
 
 function MarketDomain() {
     const { data, loading, error } = useAxios('http://localhost:4000/api/data');
+    const [animation, setAnimation] = useState('');
+
+    useEffect(() => {
+        setAnimation('animate__animated animate__zoomIn');
+        const timer = setTimeout(() => {
+            setAnimation('');
+        }, 1000);
+        return () => clearTimeout(timer);
+    }, []);
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
@@ -52,7 +61,7 @@ function MarketDomain() {
     return (
         <div>
             <h2 className='text-center' style={{ color: 'black' }}>Dominio de Mercado de Criptomonedas</h2>
-            <ResponsiveContainer width="100%" height={500}>
+            <ResponsiveContainer width="100%" height={500} className={animation}>
                 <PieChart>
                     <Pie
                         data={marketDominanceData}

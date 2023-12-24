@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import useAxios from '../Hooks/useAxios';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import usdtIcon from 'cryptocurrency-icons/svg/color/usdt.svg'; 
+import usdtIcon from 'cryptocurrency-icons/svg/color/usdt.svg';
 
 function TetherUSDtDetails() {
-  function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,').replace(/,/g, ' ');
-  }
-
   const { data, loading, error } = useAxios('http://localhost:4000/api/data');
+  const [animation, setAnimation] = useState('');
+
+  useEffect(() => {
+    setAnimation('animate__animated animate__zoomIn');
+    const timer = setTimeout(() => {
+      setAnimation('');
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
+
+  function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,').replace(/,/g, ' ');
+  }
 
   const coinName = "Tether USDt";
   const usdtData = data.data.find(coin => coin.name === coinName);
@@ -27,7 +36,7 @@ function TetherUSDtDetails() {
   ];
 
   return (
-    <div className='p-2'>
+    <div className={`p-2 ${animation}`}>
       <div className='title'>
         <h2 className='text-center' style={{ color: 'black' }}>Detalles de Tether (USDT) <img src={usdtIcon} alt="USDT Icon" width={35} /></h2>
         <h6 style={{ color: 'black' }}>{new Date(usdtData.last_updated).toLocaleString()}</h6>
